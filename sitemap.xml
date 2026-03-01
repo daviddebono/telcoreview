@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://telcoreview.com.au/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://telcoreview.com.au/about</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://telcoreview.com.au/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://telcoreview.com.au/benefits</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/case-studies</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://telcoreview.com.au/capability-statement</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/privacy</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://telcoreview.com.au/terms</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://telcoreview.com.au/blog</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://telcoreview.com.au/about.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://telcoreview.com.au/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://telcoreview.com.au/benefits.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://telcoreview.com.au/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://telcoreview.com.au/contact.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://telcoreview.com.au/capability-statement.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/privacy.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://telcoreview.com.au/terms.html</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://telcoreview.com.au/telecommunications-review-work/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://telcoreview.com.au/mobile-phone-bill-review/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/when-to-review-business-telecommunications</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/business-phone-systems-cloud-vs-on-premise</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/nbn-business-plans-what-to-compare</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/consolidating-business-mobile-plans</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/contact-centre-telephony-options-australia</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/1300-1800-numbers-routing-and-providers</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/single-bill-telecommunications-aggregation</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/blog/contract-renewal-telecommunications-review</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/when-to-review-business-telecommunications.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/business-phone-systems-cloud-vs-on-premise.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/nbn-business-plans-what-to-compare.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/consolidating-business-mobile-plans.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/contact-centre-telephony-options-australia.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/1300-1800-numbers-routing-and-providers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/single-bill-telecommunications-aggregation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/blog/contract-renewal-telecommunications-review.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://telcoreview.com.au/services/telco-review/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://telcoreview.com.au/services/telco-audit/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://telcoreview.com.au/services/telco-procurement/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/services/business-phone-systems</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/services/nbn-business-internet</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/services/mobile</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/services/contact-centre</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/services/inbound-numbers</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://telcoreview.com.au/vendors</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/vendors/telstra</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/vendors/optus</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/vendors/tpg</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/vendors/vocus</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/vendors/aussie-broadband</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/locations</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://telcoreview.com.au/locations/sydney</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/locations/melbourne</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/locations/brisbane</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/locations/adelaide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/locations/canberra</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://telcoreview.com.au/locations/hobart</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/services/business-phone-systems.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://telcoreview.com.au/services/nbn-business-internet.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://telcoreview.com.au/services/mobile.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://telcoreview.com.au/services/contact-centre.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://telcoreview.com.au/services/inbound-numbers.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://telcoreview.com.au/vendors/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/vendors/telstra.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/vendors/optus.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/vendors/tpg.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/vendors/vocus.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/vendors/aussie-broadband.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/locations/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://telcoreview.com.au/locations/sydney.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/locations/melbourne.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/locations/brisbane.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/locations/adelaide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/locations/canberra.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://telcoreview.com.au/locations/hobart.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
