@@ -46,7 +46,17 @@ The contact form on `/contact.html` posts to **`/api/contact`** (method POST). T
   | `CONTACT_RECIPIENTS` | `telco@circlebc.com.au,david.debono@circlebc.com.au,mj@circlebc.com.au`          | Comma-separated, no spaces.   |
   | `CONTACT_FROM`       | `noreply@telcoreview.com.au` (or your domain)                                     | Sender address in the email.  |
 
-3. Redeploy after changing env vars so the Function picks them up.
+3. **Redeploy** after changing env vars (Deployments → ⋮ → Retry deployment) so the Function picks them up.
+
+### Contact form not working (SMTP2GO checklist)
+
+If the form shows "Something went wrong" or emails never arrive:
+
+1. **Environment variables** — In Cloudflare Pages → your project → **Settings** → **Environment variables**, confirm for **Production** (and Preview if you test there): `SMTP2GO_API_KEY` (Encrypt: Yes), `CONTACT_RECIPIENTS` (comma-separated, no spaces), `CONTACT_FROM` (sender; verify in SMTP2GO if required).
+2. **Redeploy** — After adding or changing env vars, trigger a new deploy. Functions only read env at deploy time.
+3. **SMTP2GO dashboard** — Check API key is active, sender is allowed/verified, no blocks or rate limits.
+4. **Cloudflare logs** — Pages → Functions → Logs; look for "SMTP2GO_API_KEY not set" or "SMTP2GO error" when you submit.
+5. **Browser** — F12 → Network → submit form → check `/api/contact` request Status (200 = OK, 500 = config error, 502 = SMTP2GO rejected).
 
 ### If you don’t use the Function
 
