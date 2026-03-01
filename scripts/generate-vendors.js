@@ -179,11 +179,42 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;');
 }
 
-function pageHtml(v) {
+const LEAD_SUFFIX = [
+  'If you\'re comparing providers or considering a change, we can help you weigh options across Sydney, Melbourne, Brisbane, Adelaide, Canberra and Hobart.',
+  'Whether you\'re reviewing your current setup or exploring alternatives, our team can help you compare what\'s on offer in major Australian markets.',
+  'We help Australian businesses compare providers and plans—whether you\'re in Sydney, Melbourne, Brisbane, Adelaide, Canberra, Hobart or elsewhere.',
+  'Looking to compare providers or get a clearer picture of the market? We work with businesses across Australia to do exactly that.',
+  'Australian businesses often use us to compare options when reviewing their telco spend or considering a switch—we\'re here to help.',
+  'If you\'re weighing up providers or want an independent view of the market, we work with organisations across the country to clarify options.',
+];
+
+const TELCO_REVIEW_BLOCKS = [
+  '<p>Telco Review provides independent telecommunications advice for Australian business. We don\'t sell carrier services; we help you understand your options so you can make informed decisions. From <a href="/services/telco-review/">telco reviews</a> and bill analysis to comparing NBN, mobile and phone systems, we work across the market so you see a range of possibilities, not just one vendor\'s pitch.</p>',
+  '<p>We\'re an independent adviser: we help Australian businesses understand their telecommunications options without pushing a particular product. That might mean a <a href="/services/telco-audit/">telco audit</a>, comparing business phone or NBN offers, or looking at mobile and contact centre solutions. Our goal is to give you clear, practical information so you can choose what fits your business.</p>',
+  '<p>Australian businesses use Telco Review when they want an unbiased view of the market. We compare providers and plans—NBN, mobile, business phone, 1300 numbers—so you get options, not a sales pitch. Whether you\'re in a capital city or a regional centre, we can help you see what\'s available and what might work for your situation.</p>',
+  '<p>Telco Review helps Australian organisations get a clear picture of their telecommunications options. We don\'t sell services ourselves; we analyse your current setup and compare alternatives so you can decide with confidence. Many of our clients come to us for a <a href="/services/telco-review/">telco review</a> or audit before renegotiating or switching—we\'re here to make that process straightforward.</p>',
+  '<p>We specialise in independent telecommunications advice for business. That means comparing NBN, mobile, phone systems and more across multiple providers, so you see the full picture. Whether you\'re reviewing at contract end or simply want to know if you\'re on the right plan, we work with businesses across Australia to clarify options and next steps.</p>',
+  '<p>Our role is to help Australian businesses navigate telecommunications choices. We compare providers, plans and pricing so you can see what\'s out there—without being tied to one carrier. From <a href="/services.html">telco reviews and audits</a> to comparing business phone and broadband, we give you the information you need to make the right call.</p>',
+];
+
+const CLOSING_BLOCKS = [
+  'For the latest products and pricing, check directly with {name}. If you\'d like to compare {name} against other options or discuss how a review could help your business, <a href="/contact.html">get in touch</a>—we\'re happy to talk through your situation.',
+  'Plans and offers update regularly, so it\'s worth confirming current details with {name}. To see how they stack up against other providers or to arrange an independent review, <a href="/contact.html">contact us</a>.',
+  'We don\'t sell {name} or any other carrier; we help you compare. For current products and pricing, speak with {name} directly. To discuss a review or compare options, <a href="/contact.html">reach out</a>.',
+  'For up-to-date plans and pricing, head to {name}\'s website or give them a call. If you\'d like help comparing providers or understanding your options, <a href="/contact.html">contact Telco Review</a>—we work with businesses across Australia to do exactly that.',
+  'Current offers and pricing are best confirmed with {name}. If you\'re weighing up providers or want an independent view of the market, <a href="/contact.html">we can help</a>—our reviews and comparisons are designed to give Australian businesses clarity without the sales pitch.',
+  'Check {name}\'s latest plans and terms directly. To compare them with other options or to arrange a telco review for your business, <a href="/contact.html">contact us</a>.',
+];
+
+function pageHtml(v, index) {
   const s = slug(v.name);
   const title = escapeHtml(v.name);
   const desc = escapeHtml(v.desc);
   const strengths = v.strengths.map(x => `<li>${escapeHtml(x)}</li>`).join('\n          ');
+  const leadSuffix = LEAD_SUFFIX[index % LEAD_SUFFIX.length];
+  const telcoBlock = TELCO_REVIEW_BLOCKS[index % TELCO_REVIEW_BLOCKS.length];
+  const closingRaw = CLOSING_BLOCKS[index % CLOSING_BLOCKS.length];
+  const closing = closingRaw.replace(/\{name\}/g, title);
   return `<!DOCTYPE html>
 <html lang="en-AU">
 <head>
@@ -213,12 +244,13 @@ ${NAV}
     </section>
     <section class="section">
       <div class="container">
-        <p class="text-lead">${desc} This page summarises typical capabilities; we do not endorse or criticise. If you are reviewing your current provider or exploring alternatives, Telco Review can help you compare options across Sydney, Melbourne, Brisbane, Adelaide, Canberra and Hobart.</p>
+        <p class="text-lead">${desc} ${leadSuffix}</p>
         <h2>Typical strengths</h2>
         <ul class="unstyled">
           ${strengths}
         </ul>
-        <p>Capabilities and offers change. Confirm current products and pricing with ${title}. We provide vendor-agnostic review and comparison—<a href="/contact.html">contact us</a> to discuss your situation and alternatives.</p>
+        ${telcoBlock}
+        <p>${closing}</p>
         <p><a href="/vendors/">← Back to Vendors</a></p>
       </div>
     </section>
@@ -232,12 +264,14 @@ if (!fs.existsSync(vendorsDir)) fs.mkdirSync(vendorsDir, { recursive: true });
 const existing = new Set(['telstra', 'optus', 'tpg', 'vocus', 'aussie-broadband']);
 const created = ['vodafone-australia', 'superloop', 'macquarie-technology-group', 'over-the-wire', 'symbio', 'mnf-group'];
 
+let vendorIndex = 0;
 for (const v of VENDORS) {
   const s = slug(v.name);
   if (existing.has(s)) continue;
   const outPath = path.join(vendorsDir, s + '.html');
-  fs.writeFileSync(outPath, pageHtml(v), 'utf8');
+  fs.writeFileSync(outPath, pageHtml(v, vendorIndex), 'utf8');
   console.log('Written:', s + '.html');
+  vendorIndex++;
 }
 
 const EXISTING = [
