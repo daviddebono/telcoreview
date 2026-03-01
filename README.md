@@ -101,7 +101,7 @@ The contact form on `/contact.html` posts to **`/api/contact`** (method POST). T
   robots.txt
   css/style.css
   js/main.js
-  assets/                 # logo.svg, favicon.svg, hero image
+  assets/                 # tr-logo.png, favicon.svg, hero image
   blog/
     index.html
     template.html
