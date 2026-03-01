@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us | Telco Review – Request a Consultation</title>
+  <meta name="description" content="Request a telecommunications review consultation. Enterprise enquiry form for Australian businesses in Sydney, Melbourne, Brisbane, Adelaide, Canberra, Hobart.">
+  <link rel="canonical" href="https://telcoreview.com.au/contact.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="logo" aria-label="Telco Review home"><img src="/assets/logo.svg" alt="Telco Review" width="180" height="44"></a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-desktop">Menu</button>
+      <nav id="nav-desktop" class="nav-desktop" aria-label="Main">
+        <a href="/">Home</a>
+        <a href="/about.html">About Us</a>
+        <a href="/services.html">Services</a>
+        <a href="/blog/">Blog</a>
+        <a href="/contact.html" class="btn btn--primary">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="page-title">
+      <div class="container">
+        <h1>Contact Us</h1>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <p class="text-lead">Request a consultation for an independent telecommunications review. We'll respond to discuss your situation and how we can help. All fields are required.</p>
+        <div id="form-message" class="form-message hidden" role="alert"></div>
+        <form id="contact-form" action="/api/contact" method="post" novalidate>
+          <div class="hp" aria-hidden="true">
+            <label for="hp_website">Leave this blank</label>
+            <input type="text" id="hp_website" name="website" tabindex="-1" autocomplete="off" class="hp">
+          </div>
+          <div class="form-group">
+            <label for="name">Name <span aria-hidden="true">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email <span aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span aria-hidden="true">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label for="message">Message <span aria-hidden="true">*</span></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--large">Send enquiry</button>
+        </form>
+        <p class="form-hint">Submissions are sent to our team. We do not share your details with third parties. See our <a href="/privacy.html">Privacy Policy</a>.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><span class="logo" style="color: #fff;">Telco Review</span><p class="mb-0">Independent telecommunications review for Australian business.</p></div>
+        <div><strong>Pages</strong><ul class="unstyled"><li><a href="/about.html">About Us</a></li><li><a href="/services.html">Services</a></li><li><a href="/benefits.html">Benefits</a></li><li><a href="/case-studies.html">Case Studies</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/vendors/">Vendors</a></li><li><a href="/locations/">Locations</a></li></ul></div>
+        <div><strong>Legal</strong><ul class="unstyled"><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><p class="mb-0">© Telco Review. All rights reserved.</p></div>
+    </div>
+  </footer>
+  <script src="/js/main.js"></script>
+</body>
+</html>
