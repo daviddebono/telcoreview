@@ -20,6 +20,10 @@
   if (form) {
     var messageEl = document.getElementById('form-message');
     var required = form.querySelectorAll('[required]');
+    var startedAtField = form.querySelector('input[name="form_started_at"]');
+    if (startedAtField) {
+      startedAtField.value = String(Date.now());
+    }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();

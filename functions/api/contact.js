@@ -47,6 +47,42 @@ export async function onRequestPost(context) {
     const email = (formData.get("email") || "").toString().trim();
     const phone = (formData.get("phone") || "").toString().trim();
     const message = (formData.get("message") || "").toString().trim();
+
+    // Basic timing check: drop submissions that arrive unrealistically fast
+    const startedAtRaw = (formData.get("form_started_at") || "").toString().trim();
+    if (startedAtRaw) {
+      const startedAt = Number(startedAtRaw);
+      if (!Number.isNaN(startedAt)) {
+        const now = Date.now();
+        const elapsedMs = now - startedAt;
+        if (elapsedMs > 0 && elapsedMs < 3000) {
+          // Submitted in under 3 seconds – likely a bot
+          return jsonResponse({ ok: true }, 200, origin);
+        }
+      }
+    }
+
+    // Light content-based spam checks
+    const lowerMessage = message.toLowerCase();
+    const urlMatches = lowerMessage.match(/https?:\/\//g);
+    if (urlMatches && urlMatches.length > 2) {
+      return jsonResponse({ ok: true }, 200, origin);
+    }
+    if (message.length < 40 && /https?:\/\//.test(lowerMessage)) {
+      return jsonResponse({ ok: true }, 200, origin);
+    }
+
+    const emailDomain = email.split("@")[1] || "";
+    const blockedDomains = [
+      "mailinator.com",
+      "guerrillamail.com",
+      "10minutemail.com",
+      "tempmail.com",
+    ];
+    if (blockedDomains.some((d) => emailDomain.toLowerCase().endsWith(d))) {
+      return jsonResponse({ ok: true }, 200, origin);
+    }
+
     if (!name || !email || !phone || !message) {
       return jsonResponse({ error: "Missing required fields" }, 400, origin);
     }
