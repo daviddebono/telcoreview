@@ -93,6 +93,15 @@ a:focus-visible { outline: 2px solid var(--colour-primary); outline-offset: 2px;
 .btn--secondary:hover { background: var(--colour-primary); color: var(--colour-white); }
 .btn--large { padding: var(--space-lg) var(--space-2xl); font-size: 1rem; }
 
+/* Ensure nav buttons keep correct contrast */
+.nav-desktop a.btn--primary,
+.nav-desktop a.btn--primary:hover,
+.nav-desktop a.btn--primary:visited,
+.nav-desktop a.btn--secondary:hover,
+.nav-desktop a.btn--secondary:visited {
+  color: var(--colour-white);
+}
+
 /* Hero */
 .hero {
   position: relative;
