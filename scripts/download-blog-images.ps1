@@ -30,43 +30,33 @@ function Download-UnsplashJpgVariants {
 # Mapping: page slug -> Unsplash photo ID (royalty-free under Unsplash license)
 # Note: These are intentionally generic/enterprise-friendly.
 $map = @{
-  # Connectivity / infrastructure (ethernet cables)
+  # Make every post unique (Pexels photo IDs)
+  "telecommunications-review-work" = "3153199"
+  "mobile-phone-bill-review" = "7971544"
+  "when-to-review-business-telecommunications" = "1181421"
+  "business-phone-systems-cloud-vs-on-premise" = "7710141"
   "nbn-business-plans-what-to-compare" = "2881224"
-  "business-nbn-review-checklist" = "2881224"
-  "data-link-and-internet-review-for-business" = "2881224"
-  "telecommunications-risk-and-continuity-review" = "4508751"
-
-  # Contact centre / support (headset)
+  "consolidating-business-mobile-plans" = "29205845"
   "contact-centre-telephony-options-australia" = "8192252"
-  "contact-centre-review-questions" = "8192252"
-
-  # Desk / documents / review (laptop/desk)
-  "telecommunications-review-work" = "1586996"
-  "when-to-review-business-telecommunications" = "1586996"
-  "contract-renewal-telecommunications-review" = "1586996"
-  "telecommunications-contract-review-guide" = "7643737"
+  "1300-1800-numbers-routing-and-providers" = "261679"
+  "single-bill-telecommunications-aggregation" = "5915236"
+  "contract-renewal-telecommunications-review" = "3760067"
   "telecommunications-bill-review-before-contract-renews" = "7845307"
-  "telecommunications-audit-vs-review" = "7845307"
-  "telecommunications-review-stakeholders-and-governance" = "7845307"
-  "multi-site-telecommunications-review" = "7643737"
-
-  # Mobile / devices (smartphone + desk)
-  "mobile-phone-bill-review" = "4476635"
-  "consolidating-business-mobile-plans" = "4476635"
-  "business-mobile-fleet-review-guide" = "7971544"
-
-  # Voice / Teams Calling (generic office work)
-  "business-phone-systems-cloud-vs-on-premise" = "1586996"
-  "business-phone-system-review-checklist" = "1586996"
-  "reviewing-microsoft-teams-calling-costs" = "1586996"
-  "reviewing-microsoft-teams-calling-functionality" = "1586996"
-  "reviewing-microsoft-teams-calling-integrations" = "1586996"
-  "reviewing-microsoft-teams-calling-complexity-and-support" = "1586996"
-
-  # Aggregation / inbound numbers (desk/work)
-  "single-bill-telecommunications-aggregation" = "7845307"
-  "1300-1800-numbers-routing-and-providers" = "7845307"
-  "how-to-brief-an-independent-telecommunications-review" = "7643737"
+  "business-nbn-review-checklist" = "9798657"
+  "business-mobile-fleet-review-guide" = "4491490"
+  "telecommunications-risk-and-continuity-review" = "325229"
+  "multi-site-telecommunications-review" = "32866724"
+  "business-phone-system-review-checklist" = "1181345"
+  "contact-centre-review-questions" = "8192187"
+  "telecommunications-contract-review-guide" = "7415115"
+  "telecommunications-audit-vs-review" = "7567551"
+  "how-to-brief-an-independent-telecommunications-review" = "30535630"
+  "data-link-and-internet-review-for-business" = "4508751"
+  "telecommunications-review-stakeholders-and-governance" = "7173047"
+  "reviewing-microsoft-teams-calling-costs" = "8872388"
+  "reviewing-microsoft-teams-calling-functionality" = "6326064"
+  "reviewing-microsoft-teams-calling-integrations" = "15543114"
+  "reviewing-microsoft-teams-calling-complexity-and-support" = "3582392"
 }
 
 foreach ($k in $map.Keys) {
