@@ -89,6 +89,17 @@ If the form shows "Something went wrong" or emails never arrive:
 
 4. **Optional:** Add more vendor or location pages and add their URLs to `sitemap.xml` the same way.
 
+5. **Canonical URL** — In the new post’s `<head>`, set  
+   `<link rel="canonical" href="https://telcoreview.com.au/blog/YOUR-SLUG.html">`  
+   to match the exact `<loc>` you add in `sitemap.xml` (non-www, `.html`).
+
+## SEO: canonical host, sitemap, and www
+
+- **Preferred host:** `https://telcoreview.com.au` (non-www). All `<link rel="canonical">` tags use this origin. `robots.txt` declares `Sitemap: https://telcoreview.com.au/sitemap.xml`.
+- **Match canonicals to sitemap:** Static pages use the real file path in the canonical (e.g. `…/about.html`, `…/contact.html`). Section indexes use a **trailing slash** (e.g. `…/blog/`, `…/vendors/`, `…/locations/`, `…/services/telco-review/`). Keep each page’s canonical identical to its `<loc>` in `sitemap.xml`.
+- **www → apex:** Cloudflare Pages **`_redirects`** files **cannot** redirect by hostname (see [Pages redirects](https://developers.cloudflare.com/pages/configuration/redirects/)). To send all `https://www.telcoreview.com.au/*` to `https://telcoreview.com.au/*` with **301**, use **Cloudflare** → your zone → **Rules** → **Redirect Rules** (or **Bulk Redirects**): e.g. if URI path matches `*` on hostname `www.telcoreview.com.au`, redirect to `https://telcoreview.com.au/${path}` with status 301. Ensure **www** is a valid hostname (DNS + custom domain on Pages if needed); a 403 on www usually means the hostname isn’t fully attached or allowed.
+- **Contact form CORS:** `functions/api/contact.js` allows both apex and `www` in `ALLOWED_ORIGINS` so the form still works if someone loads the site from www before redirects are applied.
+
 ## Logo and hero image
 
 - **Logo:** The site uses `/assets/logo.svg` (text “Telco Review”). To use the existing Telco Review logo from the current live site, replace `assets/logo.svg` with that file and keep the same path.
